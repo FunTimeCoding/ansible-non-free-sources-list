@@ -1,0 +1,4 @@
+---
+- hosts: localhost
+  roles:
+    - ansible-non-free-sources-list
