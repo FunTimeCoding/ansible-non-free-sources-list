@@ -4,3 +4,6 @@
     dest: /etc/apt/sources.list
   remote_user: root
   when: ansible_os_family == 'Debian'
+
+- apt:
+    update_cache: yes
