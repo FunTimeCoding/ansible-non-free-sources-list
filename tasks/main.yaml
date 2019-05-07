@@ -3,9 +3,10 @@
     src: sources.txt
     dest: /etc/apt/sources.list
   remote_user: root
+  register: sources_list
   when: ansible_os_family == 'Debian'
 
 - apt:
     update_cache: yes
   remote_user: root
-  when: ansible_os_family == 'Debian'
+  when: ansible_os_family == 'Debian' and sources_list.changed
