@@ -1,6 +1,6 @@
 ---
 - template:
-    src: sources.txt
+    src: '{{ ansible_distribution_release }}.txt'
     dest: /etc/apt/sources.list
   remote_user: root
   register: sources_list
